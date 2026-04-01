@@ -74,12 +74,12 @@ export default function App() {
           DESCONTO ESPECIAL LIBERADO!
         </div>
 
-        <div className="mx-auto max-w-2xl px-6 pt-12 text-center">
-          <div className="inline-block rounded-lg bg-red-600 px-6 py-2 text-xl font-black text-white shadow-lg">
+        <div className="mx-auto max-w-2xl px-4 pt-12 text-center sm:px-6">
+          <div className="inline-block rounded-lg bg-red-600 px-6 py-2 text-lg font-black text-white shadow-lg sm:text-xl">
             ESPERE!
           </div>
           
-          <h2 className="mt-8 text-2xl font-black leading-tight sm:text-4xl text-gray-900">
+          <h2 className="mt-8 text-3xl font-black leading-tight sm:text-4xl text-gray-900">
             TEMOS UM <span className="text-green-600">DESCONTO ESPECIAL</span> PARA<br />
             UPGRADE DE PLANO
           </h2>
@@ -93,12 +93,12 @@ export default function App() {
               <h3 className="mt-2 text-2xl font-black uppercase tracking-tight sm:text-3xl">
                 SISTEMA COMPLETO PRO
               </h3>
-              <p className="mt-1 text-xs font-medium opacity-90">
+              <p className="mt-1 px-4 text-xs font-medium opacity-90">
                 O pacote definitivo para quem quer dominar o Excel e Google Planilhas.
               </p>
             </div>
 
-            <div className="p-8 sm:p-12">
+            <div className="p-6 sm:p-12">
               <div className="aspect-video overflow-hidden rounded-2xl bg-gray-100 shadow-inner">
                 <img 
                   src="https://i.imgur.com/JQw8vBa.png" 
@@ -128,12 +128,12 @@ export default function App() {
                   { title: "300 TEMPLATES PROPOSTAS COMERCIAIS", desc: "Modelos profissionais de propostas para fechar mais negócios." },
                   { title: "ACESSO IMEDIATO", desc: "Receba seu material imediatamente após a confirmação do pagamento." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4">
+                  <div key={i} className="flex gap-3 sm:gap-4">
                     <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded bg-green-100 text-green-600">
                       <Check className="h-3.5 w-3.5 stroke-[3]" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-black uppercase tracking-tight text-gray-900">{item.title}</h4>
+                      <h4 className="text-[11px] font-black uppercase tracking-tight text-gray-900 sm:text-xs">{item.title}</h4>
                       <p className="text-[10px] leading-relaxed text-gray-500">{item.desc}</p>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export default function App() {
                 href="https://payfast.greenn.com.br/redirect/264759"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-12 block w-full rounded-2xl bg-green-600 py-5 text-center text-lg sm:text-xl font-black uppercase tracking-tight text-white shadow-[0_10px_30px_rgba(22,163,74,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap"
+                className="mt-12 block w-full rounded-2xl bg-green-600 py-5 text-center text-lg font-black uppercase tracking-tight text-white shadow-[0_10px_30px_rgba(22,163,74,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer sm:text-xl"
               >
                 QUERO GARANTIR AGORA!
               </a>
@@ -207,18 +207,15 @@ export default function App() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </span>
-              🔥 Mais de 127 pessoas já estão usando esse sistema hoje
+              🔥 +3.000 pessoas já usam esse sistema simples
             </div>
 
-            <h1 className="text-[1.75rem] font-extrabold tracking-tight text-gray-900 leading-[1.1] sm:text-6xl lg:text-7xl">
-              Pare de <span className="text-red-600">perder</span> <br className="sm:hidden" />
-              <span className="text-red-600">horas</span> no Excel<br />
-              tenha acesso a um <br className="sm:hidden" />
-              <span className="text-green-600">sistema completo</span><br />
-              com planilhas profissionais
+            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 leading-[1.1] sm:text-6xl lg:text-7xl">
+              Se você não sabe pra onde seu <span className="text-red-600">dinheiro vai…</span> <br />
+              <span className="text-green-600">isso aqui vai te assustar</span>
             </h1>
-            <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-gray-600">
-              Organize seu financeiro, vendas, estoque e gestão em poucos minutos sem precisar criar nada do zero.
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 sm:mt-8 sm:text-xl sm:leading-8">
+              Organize seu financeiro, vendas e estoque <span className="font-bold">em minutos</span> com acesso imediato no seu <span className="font-bold text-green-600">celular ou computador</span>.
             </p>
             <div className="mt-8 mx-auto max-w-4xl overflow-hidden">
               <img 
@@ -241,45 +238,106 @@ export default function App() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 flex flex-col items-center gap-4">
+            <div className="mt-8 flex flex-col items-center gap-4 px-4 sm:px-0">
               <a 
                 href="#oferta"
-                className="inline-flex items-center justify-center rounded-full bg-green-600 px-8 sm:px-10 py-5 text-lg sm:text-xl font-bold text-white shadow-2xl transition-all hover:bg-green-700 hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
+                className="w-full inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-5 text-base font-bold text-white shadow-2xl transition-all hover:bg-green-700 hover:scale-105 active:scale-95 cursor-pointer uppercase sm:w-auto sm:px-10 sm:text-xl"
               >
-                👉 QUERO ACESSO IMEDIATO
+                👉 QUERO PARAR DE PERDER DINHEIRO AGORA
               </a>
-              <div className="flex items-center gap-2 text-[10px] font-medium text-gray-500 sm:text-sm whitespace-nowrap">
+              <div className="flex items-center gap-2 text-[10px] font-medium text-gray-500 sm:text-sm">
                 <Zap className="h-3 w-3 text-yellow-500 sm:h-4 sm:w-4" />
-                <span>Acesso imediato liberado após a confirmação</span>
+                <span>Acesso imediato e simples no seu celular</span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. QUEBRA DE DOR */}
-      <section className="bg-gray-50 py-16 px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Se você ainda faz planilhas do zero… você está perdendo tempo (e dinheiro)
-          </h2>
-          <div className="mt-6 space-y-6 text-lg leading-8 text-gray-600">
-            <p>Criar planilhas do zero é lento, confuso e frustrante.</p>
-            <p>Você precisa pensar em fórmulas, organizar dados e ainda corre o risco de errar tudo.</p>
-            <p className="font-semibold text-gray-900">Enquanto isso, profissionais já usam modelos prontos para acelerar tudo.</p>
+      {/* Antes vs Depois Section */}
+      <section className="py-12 px-6 lg:px-8 bg-white border-b border-gray-100">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* Antes */}
+            <div className="rounded-3xl bg-red-50 p-6 border border-red-100 sm:p-8">
+              <div className="flex items-center gap-2 text-red-600 font-bold mb-4">
+                <XCircle className="h-5 w-5" />
+                ANTES (O CAOS)
+              </div>
+              <ul className="space-y-3 text-gray-600 font-medium text-sm sm:text-base">
+                <li>• Horas perdidas criando fórmulas</li>
+                <li>• Planilhas que travam e dão erro</li>
+                <li>• Sem saber se teve lucro ou prejuízo</li>
+                <li>• Bagunça total nos dados</li>
+              </ul>
+            </div>
+            {/* Depois */}
+            <div className="rounded-3xl bg-green-50 p-6 border border-green-100 sm:p-8">
+              <div className="flex items-center gap-2 text-green-600 font-bold mb-4">
+                <CheckCircle2 className="h-5 w-5" />
+                DEPOIS (A SOLUÇÃO)
+              </div>
+              <ul className="space-y-3 text-gray-700 font-bold text-sm sm:text-base">
+                <li>• Tudo pronto em poucos minutos</li>
+                <li>• Sistema simples e intuitivo</li>
+                <li>• Visão clara do seu lucro real</li>
+                <li>• Organização profissional instantânea</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-10 text-center">
+            <p className="text-lg font-bold text-gray-900">
+              🚀 <span className="text-green-600">Simples, rápido</span> e tudo organizado <span className="text-green-600">em minutos</span>.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 3. APRESENTAÇÃO DA SOLUÇÃO */}
-      <section className="py-16 px-6 lg:px-8">
+      {/* 2. DOR + IDENTIFICAÇÃO */}
+      <section className="bg-gray-50 py-16 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Todo mês é a mesma coisa:
+          </h2>
+          <div className="mt-8 grid gap-4 text-left max-w-md mx-auto sm:gap-6">
+            {[
+              "Dinheiro some sem você ver",
+              "Você não sabe com o que gastou",
+              "Tenta se organizar e desiste no meio"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-red-100 sm:gap-4">
+                <XCircle className="h-5 w-5 text-red-500 shrink-0 sm:h-6 sm:w-6" />
+                <span className="text-base font-medium text-gray-700 sm:text-lg">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. HISTÓRIA */}
+      <section className="py-16 px-6 lg:px-8 bg-white">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-sm font-bold text-green-700 mb-6">
+            EU TAMBÉM ERA ASSIM...
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl leading-tight">
+            Até usar um sistema <span className="text-green-600">simples</span> que organizou <span className="font-black underline decoration-green-500 underline-offset-4">TUDO</span> em minutos
+          </h2>
+          <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+            Eu perdia noites tentando entender minhas contas. Foi aí que eu criei esse sistema de planilhas prontas para facilitar a vida de quem não tem tempo a perder.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. APRESENTAÇÃO DA SOLUÇÃO */}
+      <section className="py-16 px-6 lg:px-8 bg-gray-50">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              A solução: um sistema completo de planilhas profissionais prontas
+              Aí eu criei esse sistema de planilhas prontas…
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Você terá acesso a uma biblioteca organizada com planilhas prontas para diferentes áreas — basta baixar, editar e usar.
+              Um método <span className="font-bold text-green-600">rápido e direto</span> para você ter controle total sem precisar ser um expert em Excel.
             </p>
           </div>
 
@@ -332,13 +390,13 @@ export default function App() {
               <motion.div 
                 key={i}
                 whileHover={{ y: -5 }}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:shadow-md"
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md sm:p-8"
               >
                 <div className={`inline-flex rounded-xl ${item.color} p-3 text-white`}>
                   <item.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 text-xl font-bold text-gray-900">{item.title}</h3>
-                <p className="mt-2 text-gray-600">{item.desc}</p>
+                <p className="mt-2 text-sm text-gray-600 sm:text-base">{item.desc}</p>
                 <div className="mt-6 aspect-video overflow-hidden rounded-lg bg-gray-100">
                   <img 
                     src={item.image} 
@@ -388,7 +446,7 @@ export default function App() {
             {/* Connecting Line - Positioned between icons */}
             <div className="absolute top-7 left-[15%] right-[15%] hidden h-1 bg-green-200 lg:block" />
             
-            <div className="relative grid grid-cols-2 gap-y-12 gap-x-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-12">
+            <div className="relative grid grid-cols-2 gap-y-10 gap-x-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-12">
               {[
                 { step: "1", title: "Pagamento 100% Seguro", icon: CreditCard },
                 { step: "2", title: "Receba o Acesso Imediato", icon: Zap },
@@ -397,13 +455,13 @@ export default function App() {
               ].map((item, i) => (
                 <div key={i} className="relative flex flex-col items-center text-center">
                   <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600 sm:h-16 sm:w-16 ring-4 ring-white">
-                    <item.icon className="h-7 w-7 sm:h-8 sm:w-8" />
+                    <item.icon className="h-6 w-6 sm:h-8 sm:w-8" />
                   </div>
                   <div className="absolute -top-1 left-1/2 translate-x-3 z-20 rounded-full bg-green-600 px-1.5 py-0.5 text-[10px] font-bold text-white sm:translate-x-8 sm:text-xs">
                     {item.step}
                   </div>
                   <div className="mt-4 h-10 flex items-start justify-center">
-                    <h3 className="text-[11px] font-bold text-gray-900 sm:text-sm leading-tight max-w-[110px]">{item.title}</h3>
+                    <h3 className="text-[10px] font-bold text-gray-900 sm:text-sm leading-tight max-w-[100px] sm:max-w-[110px]">{item.title}</h3>
                   </div>
                 </div>
               ))}
@@ -412,11 +470,11 @@ export default function App() {
         </div>
       </section>
 
-      {/* 7. PROVA SOCIAL */}
-      <section className="bg-gray-50 py-16 px-6 lg:px-8">
+      {/* 7. PROVA SOCIAL (SUBIR MAIS PRA CIMA) */}
+      <section className="bg-white py-16 px-6 lg:px-8 border-t border-gray-100">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Veja o que estão falando</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">O que quem já usa está dizendo</h2>
           </div>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
@@ -439,11 +497,11 @@ export default function App() {
                 quote: "Antes eu anotava tudo no caderno e vivia perdida com pagamentos e contas. Era um caos. Depois que comecei a usar essas planilhas, ficou tudo automático praticamente. Eu só coloco os dados e já aparece tudo organizado. Economizo MUITO tempo. Sério, isso aqui deveria custar bem mais caro pelo tanto que ajuda no dia a dia."
               }
             ].map((testimonial, i) => (
-              <div key={i} className="rounded-2xl bg-white p-8 shadow-sm">
+              <div key={i} className="rounded-2xl bg-gray-50 p-6 shadow-sm border border-gray-100 sm:p-8">
                 <div className="flex gap-1 text-yellow-400">
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                 </div>
-                <p className="mt-4 italic text-gray-600">“{testimonial.quote}”</p>
+                <p className="mt-4 italic text-gray-600 text-sm sm:text-base">“{testimonial.quote}”</p>
                 <div className="mt-6 flex items-center gap-3">
                   <img 
                     src={testimonial.image} 
@@ -462,17 +520,28 @@ export default function App() {
         </div>
       </section>
 
+      {/* 11. GARANTIA (SUBIR) */}
+      <section className="py-12 px-6 lg:px-8 bg-white sm:py-16">
+        <div className="mx-auto max-w-3xl rounded-3xl bg-gray-900 p-8 text-center text-white shadow-2xl sm:p-12">
+          <ShieldCheck className="mx-auto h-12 w-12 text-green-500 sm:h-16 sm:w-16" />
+          <h2 className="mt-6 text-2xl font-bold tracking-tight sm:text-3xl">Teste por 7 dias sem risco</h2>
+          <p className="mt-4 text-base text-gray-400 sm:text-lg">
+            Se você não gostar ou achar que não é para você, basta pedir o reembolso. Devolvemos seu dinheiro sem perguntas.
+          </p>
+        </div>
+      </section>
+
       {/* 8. OFERTA & 9. PLANO PREMIUM */}
-      <section id="oferta" className="py-24 px-6 lg:px-8">
+      <section id="oferta" className="py-24 px-6 lg:px-8 bg-gray-50">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Acesso completo ao sistema</h2>
-            <p className="mt-4 text-lg text-gray-600">Um único sistema como esse poderia custar facilmente mais de R$97…</p>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Hoje você pode ter acesso por menos de R$20</h2>
+            <p className="mt-4 text-lg text-gray-600 italic">Um investimento único para organizar sua vida financeira em minutos.</p>
           </div>
 
           <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
             {/* Basic Plan */}
-            <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm flex flex-col">
+            <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm flex flex-col sm:p-8">
               <h3 className="text-lg font-bold text-gray-900">Plano Básico</h3>
               <p className="mt-2 text-sm text-gray-500">Acesso essencial ao sistema</p>
               <div className="mt-6 flex flex-col sm:flex-row sm:items-baseline gap-1">
@@ -494,9 +563,9 @@ export default function App() {
                 ].map((item, i) => (
                   <li key={i} className={`flex items-center gap-3 text-sm ${item.included ? 'text-gray-600' : 'text-red-500 line-through opacity-60'}`}>
                     {item.included ? (
-                      <CheckCircle2 className="h-5 w-5 text-green-500" />
+                      <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
                     ) : (
-                      <XCircle className="h-5 w-5 text-red-500" />
+                      <XCircle className="h-5 w-5 text-red-500 shrink-0" />
                     )}
                     {item.text}
                   </li>
@@ -505,9 +574,9 @@ export default function App() {
               <div className="mt-8 text-center">
                 <button 
                   onClick={() => setView('upgrade')}
-                  className="w-full rounded-full bg-gray-600 py-3 font-bold text-white transition-all hover:bg-gray-700 cursor-pointer shadow-md"
+                  className="w-full rounded-full bg-gray-600 py-4 font-bold text-white transition-all hover:bg-gray-700 cursor-pointer shadow-md uppercase text-sm sm:text-base"
                 >
-                  QUERO ACESSO AGORA
+                  QUERO PARAR DE PERDER DINHEIRO AGORA
                 </button>
                 <p className="mt-4 text-xs font-bold text-gray-900 animate-bounce">
                   ESPERE! temos uma oferta mais vantajosa👇
@@ -516,8 +585,8 @@ export default function App() {
             </div>
 
             {/* Premium Plan */}
-            <div className="relative self-start rounded-3xl bg-green-700 border-4 border-green-400 p-8 shadow-xl flex flex-col lg:scale-105 text-white">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-400 px-4 py-1 text-xs font-bold text-black shadow-md">
+            <div className="relative self-start rounded-3xl bg-green-700 border-4 border-green-400 p-6 shadow-xl flex flex-col lg:scale-105 text-white sm:p-8">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-400 px-4 py-1 text-xs font-bold text-black shadow-md whitespace-nowrap">
                 MELHOR OPÇÃO
               </div>
               <h3 className="text-lg font-bold">Plano Premium</h3>
@@ -539,7 +608,7 @@ export default function App() {
                   "300 Templates Propostas Comerciais"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm font-medium">
-                    <CheckCircle2 className="h-5 w-5 text-green-400" />
+                    <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -548,9 +617,9 @@ export default function App() {
                 href="https://payfast.greenn.com.br/redirect/264758"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 block w-full rounded-full bg-white py-4 text-center font-bold text-green-700 shadow-lg transition-all hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                className="mt-8 block w-full rounded-full bg-white py-4 text-center font-bold text-green-700 shadow-lg transition-all hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] cursor-pointer uppercase text-sm sm:text-base"
               >
-                QUERO ACESSO PREMIUM
+                QUERO PARAR DE PERDER DINHEIRO AGORA
               </a>
             </div>
           </div>
@@ -584,16 +653,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 11. GARANTIA */}
-      <section className="py-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl rounded-3xl bg-gray-900 p-12 text-center text-white shadow-2xl">
-          <ShieldCheck className="mx-auto h-16 w-16 text-green-500" />
-          <h2 className="mt-6 text-3xl font-bold tracking-tight">Teste por 7 dias sem risco</h2>
-          <p className="mt-4 text-lg text-gray-400">
-            Se você não gostar ou achar que não é para você, basta pedir o reembolso. Devolvemos seu dinheiro sem perguntas.
-          </p>
-        </div>
-      </section>
+      {/* 11. GARANTIA (REMOVIDO DAQUI POIS FOI SUBIDO) */}
 
       {/* 12. FAQ */}
       <section className="py-24 px-6 lg:px-8">
@@ -625,18 +685,18 @@ export default function App() {
       </section>
 
       {/* 13. CTA FINAL */}
-      <section className="bg-green-600 py-24 px-6 text-center text-white lg:px-8">
+      <section className="bg-green-600 py-20 px-6 text-center text-white lg:px-8 sm:py-24">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-4xl font-extrabold tracking-tight">Tenha acesso imediato ao sistema completo</h2>
-          <p className="mt-6 text-xl text-green-100">
-            Clique no botão abaixo e pare de perder tempo criando planilhas do zero.
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Tenha acesso imediato ao sistema completo</h2>
+          <p className="mt-6 text-lg text-green-100 sm:text-xl">
+            Clique no botão abaixo e pare de perder dinheiro agora.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 px-4 sm:px-0">
             <a 
               href="#oferta"
-              className="inline-flex items-center justify-center rounded-full bg-white px-8 sm:px-10 py-5 text-lg sm:text-xl font-bold text-green-600 shadow-xl transition-all hover:bg-gray-100 hover:scale-105 active:scale-95 whitespace-nowrap"
+              className="w-full inline-flex items-center justify-center rounded-full bg-white px-6 py-5 text-base font-bold text-green-600 shadow-xl transition-all hover:bg-gray-100 hover:scale-105 active:scale-95 uppercase sm:w-auto sm:px-10 sm:text-xl"
             >
-              👉 QUERO ACESSO AO SISTEMA
+              👉 QUERO PARAR DE PERDER DINHEIRO AGORA
             </a>
           </div>
         </div>
