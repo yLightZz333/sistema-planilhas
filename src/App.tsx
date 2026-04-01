@@ -101,7 +101,7 @@ export default function App() {
             <div className="p-8 sm:p-12">
               <div className="aspect-video overflow-hidden rounded-2xl bg-gray-100 shadow-inner">
                 <img 
-                  src="https://picsum.photos/seed/upgrade-spreadsheet/800/450" 
+                  src="https://i.imgur.com/JQw8vBa.png" 
                   alt="Upgrade Preview" 
                   className="h-full w-full object-cover"
                   referrerPolicy="no-referrer"
@@ -140,21 +140,28 @@ export default function App() {
                 ))}
               </div>
 
-              <button className="mt-12 w-full rounded-2xl bg-green-600 py-5 text-lg sm:text-xl font-black uppercase tracking-tight text-white shadow-[0_10px_30px_rgba(22,163,74,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap">
+              <a 
+                href="https://payfast.greenn.com.br/redirect/264759"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-12 block w-full rounded-2xl bg-green-600 py-5 text-center text-lg sm:text-xl font-black uppercase tracking-tight text-white shadow-[0_10px_30px_rgba(22,163,74,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap"
+              >
                 QUERO GARANTIR AGORA!
-              </button>
+              </a>
 
               <div className="mt-6 flex flex-col items-center gap-4">
                 <div className="flex items-center gap-2 text-[10px] font-bold text-gray-500">
                   <AlertTriangle className="h-3 w-3 text-yellow-500" />
                   Oferta exclusiva disponível apenas nesta página
                 </div>
-                <button 
-                  onClick={() => setView('landing')}
+                <a 
+                  href="https://payfast.greenn.com.br/redirect/264757"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs font-bold text-gray-400 underline decoration-gray-300 underline-offset-4 transition-colors hover:text-gray-600 cursor-pointer"
                 >
                   Não Obrigado, eu quero o plano básico de R$10
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -213,9 +220,9 @@ export default function App() {
             <p className="mx-auto mt-8 max-w-2xl text-xl leading-8 text-gray-600">
               Organize seu financeiro, vendas, estoque e gestão em poucos minutos sem precisar criar nada do zero.
             </p>
-            <div className="mt-8 mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-200">
+            <div className="mt-8 mx-auto max-w-4xl overflow-hidden">
               <img 
-                src="https://picsum.photos/seed/spreadsheet-preview/1200/600" 
+                src="https://i.imgur.com/JQw8vBa.png" 
                 alt="Sistema de Planilhas Preview" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
@@ -283,37 +290,43 @@ export default function App() {
                 title: "Controle Financeiro Completo",
                 desc: "Gerencie entradas, saídas e lucros automaticamente",
                 icon: BarChart3,
-                color: "bg-blue-500"
+                color: "bg-blue-500",
+                image: "https://i.imgur.com/wQUj0YL.png"
               },
               {
                 title: "Gestão de Estoque",
                 desc: "Controle produtos, entradas e saídas sem complicação",
                 icon: Package,
-                color: "bg-orange-500"
+                color: "bg-orange-500",
+                image: "https://i.imgur.com/W5483b1.png"
               },
               {
                 title: "Dashboard de Vendas",
                 desc: "Acompanhe seus resultados com gráficos profissionais",
                 icon: TrendingUp,
-                color: "bg-green-500"
+                color: "bg-green-500",
+                image: "https://i.imgur.com/bSPRF6u.png"
               },
               {
                 title: "Gestão Empresarial",
                 desc: "Organize sua operação com indicadores prontos",
                 icon: Briefcase,
-                color: "bg-purple-500"
+                color: "bg-purple-500",
+                image: "https://i.imgur.com/M3w8pgN.png"
               },
               {
                 title: "Organização e Produtividade",
                 desc: "Planeje tarefas, metas e rotina com facilidade",
                 icon: Calendar,
-                color: "bg-red-500"
+                color: "bg-red-500",
+                image: "https://i.imgur.com/yCv4TbC.png"
               },
               {
                 title: "Gestão de Projetos",
                 desc: "Acompanhe prazos, tarefas e equipes com clareza",
                 icon: LayoutGrid,
-                color: "bg-teal-500"
+                color: "bg-teal-500",
+                image: "https://i.imgur.com/UOSda0C.png"
               }
             ].map((item, i) => (
               <motion.div 
@@ -328,7 +341,7 @@ export default function App() {
                 <p className="mt-2 text-gray-600">{item.desc}</p>
                 <div className="mt-6 aspect-video overflow-hidden rounded-lg bg-gray-100">
                   <img 
-                    src={`https://picsum.photos/seed/${item.title}/400/225`} 
+                    src={item.image} 
                     alt={item.title}
                     className="h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                     referrerPolicy="no-referrer"
@@ -407,18 +420,41 @@ export default function App() {
           </div>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Eu perdia horas no Excel, agora resolvo tudo em minutos.",
-              "Muito prático, já comecei a usar no mesmo dia.",
-              "Vale muito mais do que custa."
-            ].map((quote, i) => (
+              {
+                name: "Mariana Souza",
+                role: "Pequena empresária (loja online)",
+                image: "https://i.imgur.com/f1HEAWX.png",
+                quote: "Eu sempre odiei mexer com Excel, sério. Perdida total. Eu tentava organizar meu financeiro e nunca dava certo, sempre faltava coisa ou dava erro. Depois que comecei a usar essas planilhas prontas, minha rotina mudou completamente. Hoje eu consigo ver tudo: lucro, gastos, vendas… tudo organizado. E o melhor: sem dor de cabeça. Vale MUITO mais do que custa."
+              },
+              {
+                name: "Lucas Ferreira",
+                role: "Freelancer (social media)",
+                image: "https://i.imgur.com/JmijXlI.png",
+                quote: "Eu comprei sem muita expectativa, achei que seria só mais um material qualquer… mas me surpreendeu. Eu uso as planilhas pra organizar meus clientes e até pra apresentar resultados. Ficou muito mais profissional. Inclusive, já fechei cliente usando os relatórios que montei com base nisso. Foi uma das compras mais úteis que já fiz."
+              },
+              {
+                name: "Carla Mendes",
+                role: "Autônoma (prestadora de serviços)",
+                image: "https://i.imgur.com/7lRBhmv.png",
+                quote: "Antes eu anotava tudo no caderno e vivia perdida com pagamentos e contas. Era um caos. Depois que comecei a usar essas planilhas, ficou tudo automático praticamente. Eu só coloco os dados e já aparece tudo organizado. Economizo MUITO tempo. Sério, isso aqui deveria custar bem mais caro pelo tanto que ajuda no dia a dia."
+              }
+            ].map((testimonial, i) => (
               <div key={i} className="rounded-2xl bg-white p-8 shadow-sm">
                 <div className="flex gap-1 text-yellow-400">
                   {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                 </div>
-                <p className="mt-4 italic text-gray-600">“{quote}”</p>
+                <p className="mt-4 italic text-gray-600">“{testimonial.quote}”</p>
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gray-200" />
-                  <p className="text-sm font-bold text-gray-900">Cliente Satisfeito</p>
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="h-10 w-10 rounded-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div>
+                    <p className="text-sm font-bold text-gray-900">{testimonial.name}</p>
+                    <p className="text-[10px] text-gray-500">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -508,9 +544,14 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-6 w-full rounded-full bg-white py-4 font-bold text-green-700 shadow-lg transition-all hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+              <a 
+                href="https://payfast.greenn.com.br/redirect/264758"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 block w-full rounded-full bg-white py-4 text-center font-bold text-green-700 shadow-lg transition-all hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              >
                 QUERO ACESSO PREMIUM
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -559,6 +600,10 @@ export default function App() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Perguntas Frequentes</h2>
           <div className="mt-12">
+            <FAQItem 
+              question="Quantas planilhas vou receber?" 
+              answer="Você terá acesso a um sistema completo com mais de 15.000 planilhas profissionais prontas e editáveis para todas as áreas." 
+            />
             <FAQItem 
               question="Precisa saber Excel?" 
               answer="Não! As planilhas já estão prontas com todas as fórmulas configuradas. Você só precisa preencher os dados." 
