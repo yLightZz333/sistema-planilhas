@@ -193,7 +193,7 @@ export default function App() {
         </p>
       </div>
 
-      {/* 1. HERO SECTION */}
+      {/* 1. HEADLINE & 2. SUBTÍTULO (HERO SECTION) */}
       <section className="relative overflow-hidden px-6 pt-12 pb-12 lg:px-8 lg:pt-20">
         <div className="mx-auto max-w-7xl text-center">
           <motion.div 
@@ -207,7 +207,7 @@ export default function App() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </span>
-              🔥 +3.000 pessoas já usam esse sistema simples
+              🔥 +2.137 pessoas já usam esse sistema simples
             </div>
 
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 leading-[1.1] sm:text-6xl lg:text-7xl">
@@ -215,7 +215,7 @@ export default function App() {
               <span className="text-green-600">isso aqui vai te assustar</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 sm:mt-8 sm:text-xl sm:leading-8">
-              Organize seu financeiro, vendas e estoque <span className="font-bold">em minutos</span> com acesso imediato no seu <span className="font-bold text-green-600">celular ou computador</span>.
+              Organize sua vida financeira <span className="font-bold">em minutos</span>… <span className="font-bold text-green-600">Funciona até pra quem nunca usou Excel</span>.
             </p>
             <div className="mt-8 mx-auto max-w-4xl overflow-hidden">
               <img 
@@ -254,7 +254,28 @@ export default function App() {
         </div>
       </section>
 
-      {/* Antes vs Depois Section */}
+      {/* 3. PROVA RÁPIDA */}
+      <section className="py-8 px-6 bg-green-50 border-y border-green-100">
+        <div className="mx-auto max-w-4xl flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
+          <div className="flex -space-x-3 overflow-hidden">
+            {[
+              "https://i.imgur.com/f1HEAWX.png",
+              "https://i.imgur.com/JmijXlI.png",
+              "https://i.imgur.com/7lRBhmv.png",
+              "https://picsum.photos/seed/user1/100/100",
+              "https://picsum.photos/seed/user2/100/100"
+            ].map((src, i) => (
+              <img key={i} className="inline-block h-10 w-10 rounded-full ring-2 ring-white" src={src} alt="" referrerPolicy="no-referrer" />
+            ))}
+          </div>
+          <p className="text-center text-sm font-bold text-green-800 sm:text-left">
+            "Finalmente consegui organizar meu lucro real sem complicação!" <br className="hidden sm:block" />
+            <span className="text-xs font-medium opacity-80">— Mais de 2.000 alunos satisfeitos</span>
+          </p>
+        </div>
+      </section>
+
+      {/* Antes vs Depois Section (Visual Bridge) */}
       <section className="py-12 px-6 lg:px-8 bg-white border-b border-gray-100">
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 md:grid-cols-2">
@@ -293,55 +314,56 @@ export default function App() {
         </div>
       </section>
 
-      {/* 2. DOR + IDENTIFICAÇÃO */}
-      <section className="bg-gray-50 py-16 px-6 lg:px-8">
+      {/* 4. DOR + IDENTIFICAÇÃO */}
+      <section className="py-20 px-6 lg:px-8 bg-white">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Todo mês é a mesma coisa:
-          </h2>
-          <div className="mt-8 grid gap-4 text-left max-w-md mx-auto sm:gap-6">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Todo mês é a mesma coisa:</h2>
+          <div className="mt-10 space-y-6">
             {[
-              "Dinheiro some sem você ver",
-              "Você não sabe com o que gastou",
-              "Tenta se organizar e desiste no meio"
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-red-100 sm:gap-4">
-                <XCircle className="h-5 w-5 text-red-500 shrink-0 sm:h-6 sm:w-6" />
-                <span className="text-base font-medium text-gray-700 sm:text-lg">{item}</span>
+              "O dinheiro some e você não sabe com o que gastou",
+              "Você tenta se organizar e desiste no meio",
+              "Sente que está trabalhando apenas para pagar boletos",
+              "Não tem clareza se seu negócio está dando lucro real"
+            ].map((pain, i) => (
+              <div key={i} className="flex items-center gap-4 rounded-2xl bg-red-50 p-5 text-left text-red-700 border border-red-100 sm:p-6">
+                <AlertTriangle className="h-6 w-6 shrink-0" />
+                <p className="text-base font-bold sm:text-lg">{pain}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. HISTÓRIA */}
-      <section className="py-16 px-6 lg:px-8 bg-white">
+      {/* 5. HISTÓRIA */}
+      <section className="py-20 px-6 lg:px-8 bg-gray-50 border-y border-gray-100">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-sm font-bold text-green-700 mb-6">
-            EU TAMBÉM ERA ASSIM...
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl italic">Eu também era assim…</h2>
+          <div className="mt-10 text-lg leading-relaxed text-gray-600 sm:text-xl sm:leading-9">
+            <p className="mb-6">
+              Eu chegava no fim do mês sem entender pra onde meu dinheiro tinha ido… já tentei planilha complexa, aplicativos caros, até anotar no caderno… <span className="font-bold text-red-600">nada funcionava.</span>
+            </p>
+            <p className="mb-6">
+              Foi quando percebi que o segredo não era a ferramenta mais cara, mas sim um <span className="font-bold text-green-600 underline decoration-2 underline-offset-4">sistema simples e pronto</span> que organizasse tudo em minutos.
+            </p>
+            <p className="font-bold text-gray-900">
+              Aí eu criei esse sistema de planilhas prontas… e hoje você pode ter acesso a ele.
+            </p>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl leading-tight">
-            Até usar um sistema <span className="text-green-600">simples</span> que organizou <span className="font-black underline decoration-green-500 underline-offset-4">TUDO</span> em minutos
-          </h2>
-          <p className="mt-6 text-xl text-gray-600 leading-relaxed">
-            Eu perdia noites tentando entender minhas contas. Foi aí que eu criei esse sistema de planilhas prontas para facilitar a vida de quem não tem tempo a perder.
-          </p>
         </div>
       </section>
 
-      {/* 4. APRESENTAÇÃO DA SOLUÇÃO */}
-      <section className="py-16 px-6 lg:px-8 bg-gray-50">
+      {/* 6. A SOLUÇÃO */}
+      <section className="py-16 px-6 lg:px-8 bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Aí eu criei esse sistema de planilhas prontas…
+              O que você vai receber hoje
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
               Um método <span className="font-bold text-green-600">rápido e direto</span> para você ter controle total sem precisar ser um expert em Excel.
             </p>
           </div>
 
-          {/* 4. O QUE VOCÊ VAI RECEBER */}
           <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
@@ -411,7 +433,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 5. BENEFÍCIOS */}
+      {/* 7. BENEFÍCIOS VISUAIS */}
       <section className="bg-gray-900 py-16 px-6 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
@@ -436,41 +458,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. COMO FUNCIONA */}
-      <section className="py-16 px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simples, rápido e direto</h2>
-          </div>
-          <div className="mt-16 relative">
-            {/* Connecting Line - Positioned between icons */}
-            <div className="absolute top-7 left-[15%] right-[15%] hidden h-1 bg-green-200 lg:block" />
-            
-            <div className="relative grid grid-cols-2 gap-y-10 gap-x-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-12">
-              {[
-                { step: "1", title: "Pagamento 100% Seguro", icon: CreditCard },
-                { step: "2", title: "Receba o Acesso Imediato", icon: Zap },
-                { step: "3", title: "Escolha sua planilha", icon: MousePointer2 },
-                { step: "4", title: "Comece a Lucrar Hoje", icon: Rocket }
-              ].map((item, i) => (
-                <div key={i} className="relative flex flex-col items-center text-center">
-                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600 sm:h-16 sm:w-16 ring-4 ring-white">
-                    <item.icon className="h-6 w-6 sm:h-8 sm:w-8" />
-                  </div>
-                  <div className="absolute -top-1 left-1/2 translate-x-3 z-20 rounded-full bg-green-600 px-1.5 py-0.5 text-[10px] font-bold text-white sm:translate-x-8 sm:text-xs">
-                    {item.step}
-                  </div>
-                  <div className="mt-4 h-10 flex items-start justify-center">
-                    <h3 className="text-[10px] font-bold text-gray-900 sm:text-sm leading-tight max-w-[100px] sm:max-w-[110px]">{item.title}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. PROVA SOCIAL (SUBIR MAIS PRA CIMA) */}
+      {/* 8. PROVA SOCIAL */}
       <section className="bg-white py-16 px-6 lg:px-8 border-t border-gray-100">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
@@ -520,23 +508,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* 11. GARANTIA (SUBIR) */}
-      <section className="py-12 px-6 lg:px-8 bg-white sm:py-16">
-        <div className="mx-auto max-w-3xl rounded-3xl bg-gray-900 p-8 text-center text-white shadow-2xl sm:p-12">
-          <ShieldCheck className="mx-auto h-12 w-12 text-green-500 sm:h-16 sm:w-16" />
-          <h2 className="mt-6 text-2xl font-bold tracking-tight sm:text-3xl">Teste por 7 dias sem risco</h2>
-          <p className="mt-4 text-base text-gray-400 sm:text-lg">
-            Se você não gostar ou achar que não é para você, basta pedir o reembolso. Devolvemos seu dinheiro sem perguntas.
-          </p>
-        </div>
-      </section>
-
-      {/* 8. OFERTA & 9. PLANO PREMIUM */}
+      {/* 9. OFERTA & PLANO PREMIUM */}
       <section id="oferta" className="py-24 px-6 lg:px-8 bg-gray-50">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Hoje você pode ter acesso por menos de R$20</h2>
-            <p className="mt-4 text-lg text-gray-600 italic">Um investimento único para organizar sua vida financeira em minutos.</p>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Hoje você pode ter acesso por menos de R$20 <span className="text-green-600">(menos que um lanche)</span></h2>
+            <p className="mt-4 text-lg text-gray-600 italic">Um investimento único para organizar sua vida financeira <span className="font-bold">em minutos</span>.</p>
           </div>
 
           <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:max-w-4xl lg:mx-auto">
@@ -626,7 +603,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* 10. BÔNUS */}
+      {/* 10. GARANTIA */}
+      <section className="py-12 px-6 lg:px-8 bg-white sm:py-16">
+        <div className="mx-auto max-w-3xl rounded-3xl bg-gray-900 p-8 text-center text-white shadow-2xl sm:p-12">
+          <ShieldCheck className="mx-auto h-12 w-12 text-green-500 sm:h-16 sm:w-16" />
+          <h2 className="mt-6 text-2xl font-bold tracking-tight sm:text-3xl">Teste por 7 dias sem risco</h2>
+          <p className="mt-4 text-base text-gray-400 sm:text-lg">
+            Se você não gostar ou achar que não é para você, basta pedir o reembolso. Devolvemos seu dinheiro sem perguntas.
+          </p>
+        </div>
+      </section>
+
+      {/* 11. BÔNUS */}
       <section className="bg-green-50 py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
@@ -684,7 +672,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 13. CTA FINAL */}
+      {/* 11. CTA FINAL (FORTE) */}
       <section className="bg-green-600 py-20 px-6 text-center text-white lg:px-8 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Tenha acesso imediato ao sistema completo</h2>
